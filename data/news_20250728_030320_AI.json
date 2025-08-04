@@ -1,0 +1,141 @@
+{
+  "metadata": {
+    "count": 11,
+    "saved_at": "2025-07-28T03:03:20.337021",
+    "format": "json"
+  },
+  "news": [
+    {
+      "title": "从构想走向现实：一个 AI Agent 开发者的实践手记",
+      "content": "chnwine: 一、缘起：为什么世界需要另一个 AI Agent ？\n1. 从 ChatGPT 到 AutoGPT：AI 工具的进化\n最开始接触 AI 时，我只是把 ChatGPT 当作一个聊天机器人。到后来又用上了 Cline 、Windsuf 、Cursor 这类 AI 编程工具。起初不太习惯不怎么去用，但习惯了之后发现，这些工具用起来是挺爽的。比如，用 Cline 和 Cursor 直接对话就可以快速定位和修复代码问题，脑子不在线的时候直接提需求‘你要 XXXXXX’，然后等着结果就行。我可以信不过 AI ，但我可以信得过测试用例和运行结果，渐渐的AI 不再只是对话，而是逐渐成为工作流的一部分，不想动脑子的时候就不动脑子，直接提需求就行，然后 TAB 、TAB 、TAB ，done 。\n2. 传统行业的痛点：Excel 、手写单据和低效协作\n我的上一份工作是做物流行业的信息系统。这个行业里，很多人还在用 Excel 、手写单据、打印 PDF 、手动录入数据——效率低得让人抓狂。曾经，我花了三个月写了个 Mac/iOS 的 OCR 工具，想帮他们自动提取表格数据。虽然效果不错，但考虑到物流从业者大多用 Windows 和 Android ，市场覆盖率太低，就放弃了。  \n3. 内心的激动：是时候让 AI 来解决这些枯燥的重复劳动了\n再后来，GPT-4 刚出来的时候我测试了 GPT-4 的多模态能力，让它解析 PDF 和图片里的表格数据——结果远超预期。我就想如果给 AI 一对翅膀，让 AI 不仅能“看懂”文件，还能“操作”软件，工作方式会被彻底改变。 \n2025 年 2 月，公司裁员我领了大礼包。“说人话+自动化”再次点燃了我的热情，按捺不住心中的悸动“现在不做，回头就只有看别人做好的了“， ”just do it”！\n\n让 AI 长上翅膀和手脚吧\n\n二、构建：在理想与现实之间走钢丝\n1. 产品定位的迷茫\n最开始，我并没有想清楚 Swiflow 到底要服务谁。只是觉得“说人话+自动化”很酷。为了验证想法，我在朋友的数据库上跑了个用例：让 AI 根据媒体资讯自动生成研究报告。\n效果很好——即使没有数据字典的辅助，AI 也能自己查询分析表结构、查询数据、输出报表构建看起来不错的分析。\n这个正向反馈让我开心了好一阵子，但问题也随即而来：我开发的是桌面端应用，大多数用户根本没有数据库可用。\n“酷炫效果”不等于“实用产品”，只能继续从桌面场景找具体用例。  \n2. 功能取舍\n第一版 Swiflow 内置了几个核心工具：  \n\n文件操作（文本读写）  \n命令行工具（执行脚本）\n数据库工具（数据查询）\n浏览器自动化（网页搜索）  \n\n浏览器工具让我纠结了很久：“到底该支持哪些操作？” 点击？输入？滚动？还是直接模拟用户行为？\n越想越复杂，最后意识到：“先解决一个具体问题，别妄想做‘全能 Agent’。” \n3. 技术踩坑\n在这个项目之前我没做过真正的 Autonomous Agent （自主智能体），只写过自动回复邮件的 Bot 。\n但完全自动化的 Agent 复杂程度远超预期——原本乐观估计一两个月搞定，结果光是 MVP 就花了俩月，中间还不停从开源项目（ Cline 、Sono 、Open Manus ）中学习经验，有时候忍不住问自己为什么要自己造轮子，开车不香么。\n\n感谢开源组织，好人一生平安 \n\n问题 1：Prompt 像豆腐渣工程\n初始 Prompt 是基于别的项目改的，只做了简单约束，结果 AI 经常“自由发挥”——要么误解需求，要么生成不靠谱的代码。  \n问题 2：多轮对话崩盘\n用户提问：“将这个目录下的 PDF 单据整理成表格。”\nAgent 响应：写 Python 脚本→装依赖→调整环境→修改报错→再错再改……  \n\n出发了很久，还没走出高老庄。 \n\n问题 3：上下文爆炸\n由上可以看出 AI 是个老好人，不会拒绝你，也不会拒绝你做的事。在 Agent 里正是如此‘我错了，我要改’，‘让我再试试’，‘我还能行，扶我起来’。\n但 Agent 每执行一步都会往对话里塞更多信息，而且不停试错不停改，很快就把上下文窗口撑爆了。\n\nAgent 勤奋且努力，我半夜醒来都觉得自己不如 Agent 努力，忍不住想说‘扶我起来我还能行’。\n\n问题 4: 造工具不靠谱\n最初没有经验，以为 python 的轮子那么多了，让 agent 随便造呗，给你 100 块钱想吃啥买啥\n等实际测试时发现，agent: '你让我自己做饭么？'，'是的，你自己做饭'，'好的，请放心'\n最后：'MAMA ，房子被烧了'\n由于让 Agent 自己搓工具靠不住，最终决定还是先用现成的吧。\n于是迅速拥抱 MCP 生态，先解决工具链的稳定性问题。\n\n饿肚子的时候吃外卖也挺好的，预制菜不预制菜的重要么？\n\n三、顿悟：Agent 开发中的反常识\n1. “全能 Agent ”是幻觉\n测试时，Swiflow 玩五子棋、写贪吃蛇、解数独——表现惊艳。但一遇到真实工作场景（比如“物流单据转 Excel”），效果就大打折扣。  \n后来我懂了：AI 有知识，但没经验 它知道“表格”是什么，但它不懂“物流行业的单据长啥样”，也不懂每个字段之间的业务关系。这个问题也不是一个复杂的问题，本可以调整 Prompt 来优化，但整个流程中“发现问题→修改 Prompt →重新对话”的循环太不友好。于是，我加入了“记忆功能”——用户只需在对话中提醒 Agent “记住这个、记住那个”，它就能逐步学习业务规则。  \n2. Agent 需要适时\"踩刹车\"\n传统软件开发是\"输入→处理→输出\"，但 Agent 更像是概率性的探索。如果完全放手让它自己跑，很容易南辕北辙。在合适的地方适当的停下来咨询用户的意见也是个不错的选择，像 Cursor 的 Agent 就经常这么干不知道是为了省 token 还是为啥。\n3. \"完全自主\"是个美丽的陷阱\n最初我希望 Swiflow 能\"完全自主\"——用户说一句话，AI 就能独立完成整个任务。但现实给了我当头一棒：  \n\n输入输出比例失衡：用户输入 10 个字，AI 可能输出 1000 字，交互效率极低  \n错误会累积放大：一步走错，后面全歪，越跑越偏  \n缺乏反馈机制：用户不知道 AI 在干什么，AI 也不知道自己做得对不对  \n\n所以现在的思路是：与其信马由缰，不如相敬如宾 —— 让 AI 成为\"会主动汇报的助手\"，而不是\"全权代理的黑盒\"。  \n四、成果：从理想主义到实用主义\n经过半年的摸爬滚打，Swiflow （swiflow.cc）现在具备了一些实用的核心功能：\n\n支持自定义 Prompt：用户可以随意更改 Prompt ，定制属于自己的工作流\n支持记忆功能：Agent 能记住重要信息，只需说\"请记住我们刚才沟通的结论\"\nMCP 协议支持：通过 MCP Server 扩展 Agent 能力，让功能更强大\n支持定时任务：可以设置\"每半小时帮我检查一下最新邮件\"这样的定时任务\n支持多 Agent：为不同任务设置专门的 Agent ，避免上下文混乱\n\n在实际应用中，它能稳定处理批量文件处理、数据格式转换、邮件管理、信息收集等桌面自动化任务。虽然离最初\"AI 万能助手\"的愿景还有距离，但至少在具体场景下，它确实能帮用户省下不少时间。\n更重要的是，这个过程让我对 AI Agent 有了更现实的认知：它不是魔法，而是工具。就像任何工具一样，关键在于找到合适的使用场景，而不是期待它解决所有问题。\n五、 结语\n做 Swiflow 的半年里，我的体会是：虽然 AI Agent 还不完美，但大模型的快速进化和 Agent 在某些场景下的优异表现，让未来值得期待。也许某一天，我们真的可以直接委托 AI Agent 撒手去做了，我们就吃着火锅唱着歌，事儿就办成了。\n如果你也想体验一下这种\"撒手掌柜\"的感觉，欢迎来试试 Swiflow——说不定真能让你提前下班去吃火锅呢。",
+      "url": "https://www.v2ex.com/t/1148052",
+      "published_date": "2025-07-27T13:24:54",
+      "source": "V2EX-最新主题",
+      "author": "chnwine",
+      "summary": "chnwine: <h2><strong>一、缘起：为什么世界需要另一个 AI Agent ？</strong></h2>\n<h3><strong>1. 从 ChatGPT 到 AutoGPT：AI 工具的进化</strong></h3>\n<p>最开始接触 AI 时，我只是把 ChatGPT 当作一个聊天机器人。到后来又用上了 Cline 、Windsuf 、Cursor 这类 AI 编程工具。起初不太习惯不怎么去用，但习惯了之后发现，这些工具用起来是挺爽的。比如，用 Cline 和 Cursor 直接对话就可以快速定位和修复代码问题，脑子不在线的时候直接提需求‘你要 XXXXXX’，然后等着结果就行。我可以信不过 AI ，但我可以信得过测试用例和运行结果，渐渐的<strong>AI 不再只是对话，而是逐渐成为工作流的一部分</strong>，不想动脑子的时候就不动脑子，直接提需求就行，然后 TAB 、TAB 、TAB ，done 。</p>\n<h3><strong>2. 传统行业的痛点：Excel 、手写单据和低效协作</strong></h3>\n<p>我的上一份工作是做物流行业的信...",
+      "keywords": [
+        "AI"
+      ]
+    },
+    {
+      "title": "请教开通 AirPods 助听器功能",
+      "content": "freefishmaan: 请教各位大佬，目前在国内如何开通 AirPods Pro2 的助听器功能？\n设备 Mac+iPhone+AirPods 都是国行。\n有没有通过修改 Mac 的定位来开通的？感觉这样做比 iPhone 容易点？\n另外请教在境外开通这个功能的设备，AppleID 有要求是非国行吗？回来还能继续使用助听器功能吗？\n谢谢各位大佬",
+      "url": "https://www.v2ex.com/t/1148050",
+      "published_date": "2025-07-27T13:06:17",
+      "source": "V2EX-最新主题",
+      "author": "freefishmaan",
+      "summary": "freefishmaan: <p>请教各位大佬，目前在国内如何开通 AirPods Pro2 的助听器功能？\n设备 Mac+iPhone+AirPods 都是国行。\n有没有通过修改 Mac 的定位来开通的？感觉这样做比 iPhone 容易点？\n另外请教在境外开通这个功能的设备，AppleID 有要求是非国行吗？回来还能继续使用助听器功能吗？\n谢谢各位大佬</p>",
+      "keywords": [
+        "AI"
+      ]
+    },
+    {
+      "title": "Debian 服务器通过 rclone 挂载缤纷云（或其他 s3 兼容云存储），适用宝塔备份任务",
+      "content": "LongLights: 安装 rclone 并配置好缤纷云或其他 s3 兼容存储\n在缤纷云或其他云存储后台获取 Access Key 和 Secret Key\n随后 ssh 进入你的服务器，安装 rclone 并配置缤纷云存储桶\n\n依次运行\n\napt update\napt install -y curl unzip fuse libfuse2\napt install -y rclone\n\n\n配置缤纷云或其他 s3 存储，运行\n\nrclone config\n\n输入 n 回车新建 config ，依次按照提示输入：\nname （自定义，如 bitiful ）\nstorage （选 Amazon S3 Compliant Storage Providers 对应的数字）\nprovider （选 Any other S3 compatible provider 对应的数字）\naccess_key_id 、secret_access_key （第 1 步获得）\nregion （如缤纷云的 cn-east-1 ，在“桶信息”可查）\nendpoint （如缤纷云的 s3.bitiful.net ，在“桶信息”可查）\n配置过程中没提到的项目直接回车即可，最后按 q 退出 config 配置即可。如果不喜欢使用这个交互过程，也可以直接编辑~/.config/rclone/rclone.conf ，格式如：\n[bitiful]\ntype = s3\nprovider = Other\naccess_key_id = &lt;access_key_id&gt;\nsecret_access_key = &lt;secret_access_key&gt;\nregion = cn-east-1\nendpoint = https://s3.bitiful.net\n\n将缤纷云或其他 s3 兼容存储挂载到 Debian 本地盘符\n\n在 opt 下创建一个目录，如 bitiful\n\nmkdir -p /mnt/bitiful\n\n\n测试能否正确挂载，ssh 内运行（注意替换 bucket 名）：\n\nrclone mount bitiful:&lt;你的 bucket 名&gt; /mnt/bitiful --uid 0 --gid 0 --umask 0022\n\n运行后去 ftp 查看/opt/bitiful 下是否存在你 bucket 中的文件和目录，有即表示挂载成功\n如果成功，按 crtl+c 结束 rclone 的前台进程\n配置 rclone 后台运行+开机启动\n\n在/etc/systemd/system 目录下新建一个文件，名为\"bitiful.service\"，内容如下 (注意替换 bucket 名)：\n\n[Unit]\nDescription=挂载 Bitiful S4 存储桶\nAfter=network-online.target\nWants=network-online.target\n\n[Service]\nType=simple\nExecStart=/usr/bin/rclone mount bitiful:&lt;你的 bucket 名&gt; /mnt/bitiful --uid 0 --gid 0 --umask 0022\nExecStop=/usr/bin/fusermount -u /mnt/bitiful\nRestart=on-failure\nRestartSec=5\n\n[Install]\nWantedBy=multi-user.target\n\n\n重载 systemd 配置\n\nsystemctl daemon-reload\n\n\n启动挂载并开机启动：\n\nsystemctl start rclone-bitiful\nsystemctl enable rclone-bitiful\n\n在宝塔内使用\n在宝塔内直接把这个挂载盘符作为备份目的地址会由于 inode 为 0 导致备份失败（但实际并不会不足），需要修改宝塔的验证\n在/www/server/panel/class 目录下，修改 panelBackup.py 中的：\n_inode_min = 10\n\n变为\n_inode_min = 0\n\n就可以在备份任务中把/mnt/bitiful 当成一个本地目录使用了~\n\n如果是备份目录，在计划任务的脚本编辑处，不可以直接指定备份路径，需要修改宝塔面板设置的默认备份路径\n\n使用缤纷云或其他 s3 兼容云存储代替 wordpress 的本地媒体库\n如果是博客博主，应该有很多朋友是希望直接能将博文附件上传到缤纷云使用的（毕竟缤纷云的图片处理是我用过的所有云存储中最强的）\n如果是 wordpress ，可以直接使用 [ Media Cloud ] 这个插件，和 rclone 相似的方式配置并打开删除本地媒体功能即可。这一步太简单就不写说明了",
+      "url": "https://www.v2ex.com/t/1148043",
+      "published_date": "2025-07-27T12:34:49",
+      "source": "V2EX-最新主题",
+      "author": "LongLights",
+      "summary": "LongLights: <h2>安装 rclone 并配置好缤纷云或其他 s3 兼容存储</h2>\n<p>在缤纷云或其他云存储后台获取 Access Key 和 Secret Key</p>\n<p>随后 ssh 进入你的服务器，安装 rclone 并配置缤纷云存储桶</p>\n<ul>\n<li>依次运行</li>\n</ul>\n<pre><code>apt update\napt install -y curl unzip fuse libfuse2\napt install -y rclone\n</code></pre>\n<ul>\n<li>配置缤纷云或其他 s3 存储，运行</li>\n</ul>\n<pre><code>rclone config\n</code></pre>\n<p>输入 n 回车新建 config ，依次按照提示输入：\nname （自定义，如 bitiful ）\nstorage （选 Amazon S3 Compliant Storage Providers 对应的数字）\nprovider （选 Any other S3 compatible provider 对应的数字）\na...",
+      "keywords": [
+        "AI"
+      ]
+    },
+    {
+      "title": "如何通过 smb 访问连接在 mac 上的外接硬盘？",
+      "content": "shinsekai: mac 访问 mac ，登录的是管理员账户，现在已经可以访问内置硬盘了，但外置硬盘就不行，已经将外置硬盘添加入文件共享的文件夹列表里，依然无法访问，只有当“为所有用户开启完全磁盘访问”开启后才能才能访问外置硬盘，但感觉不安全，不开就连不上，有办法吗",
+      "url": "https://www.v2ex.com/t/1148025",
+      "published_date": "2025-07-27T10:26:13",
+      "source": "V2EX-最新主题",
+      "author": "shinsekai",
+      "summary": "shinsekai: <p>mac 访问 mac ，登录的是管理员账户，现在已经可以访问内置硬盘了，但外置硬盘就不行，已经将外置硬盘添加入文件共享的文件夹列表里，依然无法访问，只有当“为所有用户开启完全磁盘访问”开启后才能才能访问外置硬盘，但感觉不安全，不开就连不上，有办法吗</p>",
+      "keywords": [
+        "AI"
+      ]
+    },
+    {
+      "title": "Anthropic 已实现“人手一个 AI 员工”！ Claude Code 内部用法首次曝光!",
+      "content": "xirong: 都说 Claude code 很强，相当于“新员工”，除了编程外，我们看看 创造 claude code 这个工具的 Anthropic 的公司的员工是如何使用这个工具的。 看完你发现，时代真的变了，拥抱变化，人机协同！\n今天，我看到了 Anthropic 官方公布的一份内部报告，讲他们自家员工到底是怎么使用 Claude Code 的。\n我看完后非常兴奋，因为文章里的案例，完美印证了我之前说的“个体赋能层”和“组织变革层”。\n它生动地展示了 Claude Code 不仅是 Copilot ，更开始真正扮演 Colleague （同事）的角色，自主地完成任务。\nhttps://mp.weixin.qq.com/s/0JUEzWKjIlVsRDHco6RoWA",
+      "url": "https://www.v2ex.com/t/1148021",
+      "published_date": "2025-07-27T10:14:06",
+      "source": "V2EX-最新主题",
+      "author": "xirong",
+      "summary": "xirong: <p>都说 Claude code 很强，相当于“新员工”，除了编程外，我们看看 创造 claude code 这个工具的 Anthropic 的公司的员工是如何使用这个工具的。 看完你发现，时代真的变了，拥抱变化，人机协同！</p>\n<p>今天，我看到了 Anthropic 官方公布的一份内部报告，讲他们自家员工到底是怎么使用 Claude Code 的。</p>\n<p>我看完后非常兴奋，因为文章里的案例，<strong>完美印证了我之前说的“个体赋能层”和“组织变革层”</strong>。</p>\n<p>它生动地展示了 Claude Code 不仅是 Copilot ，更开始真正扮演 Colleague （同事）的角色，自主地完成任务。</p>\n<p><a href=\"https://mp.weixin.qq.com/s/0JUEzWKjIlVsRDHco6RoWA\" rel=\"nofollow\">https://mp.weixin.qq.com/s/0JUEzWKjIlVsRDHco6RoWA</a></p>",
+      "keywords": [
+        "AI"
+      ]
+    },
+    {
+      "title": "🔥超爱公费旅游的远程兼职技术团队已从成都返回✈️ 寻找 [前端开发] 、 [高级 UI 设计] 🍲 | 下一站去哪儿等你来定！🥰",
+      "content": "heyao114: 熟悉我的老朋友们看过来！\n新朋友也欢迎考古翻翻我之前的帖子（尤其是那些充满欢乐团建照片的！😉）\n4 个月前我们预告了东京团建，3 月份我们真的一起去浪了！🗼 \n更劲爆的是，就在一周前，咱们团队又双叒搞事情了！为了让分散各地的技术小伙伴们能线下“面基”、深度唠嗑，我们特地组织了成都 4 天 3 晚纯玩技术趴！ 🐼 🍲\n划重点反馈： 参与的新老同学一致好评！没有赶鸭子上架的景点打卡，只有吃好喝好聊好技术！氛围拉满，信任感➕➕➕，对团队的归属感那是蹭蹭往上涨！💪💪（文末有成都松弛感聚会照片！）\n\n现在，团队业务发展蒸蒸日上，我们急需两位优秀小伙伴加入，一起搞更大的事情！\n\n团队老底再交代一下\n我们是 anz.io ，一个由海外华人技术大牛领衔的靠谱远程技术服务团队。老板（南洋理工技术背景）、PM 负责人和核心伙伴们都是合作多年、默契十足的老战友。\n\n\n业务稳：专注对接 Web3 及前沿科技领域 优质、靠谱的项目方开发需求，专啃硬骨头价值项目\n模式灵：核心成员国内远程全职,大量优秀伙伴远程兼职合作～自由接需求，完全不影响打工！\n氛围顶：看我们济州岛+东京+成都团建就知道，我们坚信快乐的团队才能创造牛逼的价值！\n保障强：极其重要！ 我们深知远程合作的信任基础。即使初期磨合不够顺畅，该结算的费用我们一分不少、准时支付！ 当然我们也期待找到真正靠谱、值得长期信赖的伙伴！\n目标大： 老板的“小目标”依然坚挺——稳定合作的兼职伙伴突破 50 人！梦想还是要有的，万一实现了呢？做大做强，干就完了！🐛🐛🐛 (目前人才库已突破 80+，稳定合作近 30 人)\n\n\n🌟本次重磅求贤令🌟\nTOP 1：高级 UI 设计师 (模式：远程+兼职)\n\n你不是画图匠，你是产品体验的塑造者！\n\n岗位核心： 负责复杂 Web/App 产品的整体视觉与交互设计，构建可持续、易扩展的设计系统，深刻理解业务并提升用户体验。\n我们需要这样的你：\n\n5 年+ 资深 UI/UX 设计经验，有主导或深度参与成熟产品设计体系的经验（能讲清楚设计决策逻辑和落地过程）。\n精通 Figma/Sketch 等主流设计工具，对设计规范、组件化、设计系统有深刻理解和实践。\n强烈的产品思维和用户同理心，能精准把握业务目标与用户体验的平衡点。\n优秀的沟通协作能力，能清晰阐述设计理念，并与产品、前端高效配合。\n(加分项) 对 Web3 、AI 等前沿领域的设计趋势有了解或兴趣；有动效设计能力。\n\nTOP 2：高级前端开发工程师 (模式：远程+兼职)\n\n你不只是写代码，你是高质量用户体验的终极实现者！\n\n岗位核心： 负责复杂 Web 应用的前端架构设计、核心模块开发与性能优化，确保高性能、高可用、可维护的用户界面。\n我们需要这样的你：\n\n5 年+ 前端开发经验，扎实的 JavaScript/TypeScript 基础，精通 React 或 Vue 及其生态。\n深刻理解前端工程化，熟练掌握构建工具 (Webpack/Vite 等)、状态管理、测试框架。\n有复杂应用架构设计经验，关注性能优化、跨端兼容性（ Web 优先）及代码质量。\n良好的产品意识，能积极参与需求讨论，提出技术实现方案并评估风险。\n优秀的沟通能力和责任心，具备独立解决问题和协作攻关的能力。\n(加分项) 有 Web3 DApp 前端开发经验；熟悉 Canvas/WebGL 可视化；了解服务端渲染(SSR)/静态生成(SSG)；对 AI 应用集成有兴趣。\n\n\n🏄‍♀️ 合作模式 &amp; 硬核保障\n💻 配合方式： 纯线上！项目经理负责需求对接和协调，你专注技术输出就好～\n💼工作形式： 兼职，合作期间能保证每周 20h 以上的工作时间即可～\n⏰ 时间自由： 兼职无硬性坐班，根据你的可支配时间灵活协商任务排期！\n💰 薪酬竞争力：基于你的全职薪资水平和期望测算时薪，兼职也能拉齐全职薪资水平！ 支持人民币 / USDT 结算，灵活方便\n💎 核心保障重申： 项目费用结算清晰、准时！初期磨合不畅也绝不影响应得报酬！ (我们看重长期价值与信任)\n🌹面试高效：  1-2 轮远程面试，不反复折腾，尊重你的时间～\n\n✨ 为什么选择我们？总结一下闪光点 ✨\n真·靠谱团队： 业务稳定，老板技术出身懂行，团队氛围开放信任。\n真·福利团建： 一年两次公费旅游团建（东京已成行，成都刚嗨完！），纯玩无压力，只为增进情谊。\n真·远程友好： 灵活自由，专注技术，项目经理兜底沟通。\n真·薪酬保障： 结算准时透明，初期合作也有保障，尊重你的每一分付出。\n真·成长空间： 接触前沿领域（ Web3/AI ）优质项目，与高手过招，兼职转全职通道明确。\n真·远大目标： 加入我们，一起实现老板那“50 人稳定合作大计”！成为这激动人心成长故事的一部分！\n\n🔥 心动了吗？\n如果你是我们寻找的高级 UI 设计大牛 或 前端开发扛把子，渴望在一个 氛围超好、尊重付出、有真福利、干大事 的远程团队施展才华，请火速将你的简历+作品集/项目介绍砸过来！\n期待与优秀的你，一起书写下一段精彩旅程，说不定下次团建合影里就有你的笑容！😉\n欢迎投递简历至我邮箱 yao@anz.io,也可以直接添加我的个人 wechat ，🔍MTg3MDI1MTY3Mzk= 即可",
+      "url": "https://www.v2ex.com/t/1148019",
+      "published_date": "2025-07-27T10:01:02",
+      "source": "V2EX-最新主题",
+      "author": "heyao114",
+      "summary": "heyao114: <p>熟悉我的老朋友们看过来！</p>\n<p>新朋友也欢迎考古翻翻我之前的帖子（尤其是那些充满欢乐团建照片的！😉）</p>\n<p>4 个月前我们预告了东京团建，3 月份我们真的一起去浪了！🗼 </p>\n<p>更劲爆的是，就在一周前，咱们团队又双叒搞事情了！为了让分散各地的技术小伙伴们能线下“面基”、深度唠嗑，我们特地组织了<strong>成都 4 天 3 晚纯玩技术趴</strong>！ 🐼 🍲</p>\n<p><strong>划重点反馈</strong>： 参与的新老同学一致好评！没有赶鸭子上架的景点打卡，只有吃好喝好聊好技术！氛围拉满，信任感➕➕➕，对团队的归属感那是蹭蹭往上涨！💪💪（文末有成都松弛感聚会照片！）</p>\n<hr>\n<p>现在，团队业务发展蒸蒸日上，我们急需两位优秀小伙伴加入，一起搞更大的事情！</p>\n<blockquote>\n<p>团队老底再交代一下\n我们是 <a href=\"http://anz.io/\" rel=\"nofollow\">anz.io</a> ，一个由海外华人技术大牛领衔的靠谱远程技术服务团队。老板（南洋理工技术背景）、PM 负...",
+      "keywords": [
+        "AI"
+      ]
+    },
+    {
+      "title": "在 Kali Linux 上折腾 5G Cellular 模块求大佬指点",
+      "content": "hairenjun: 以前买的 EC20 实在是顶不住了，突发奇想然后在海鲜市场淘了一块 FM-350-GL 和转接板准备升级一下，虽然事先查看了很多资料，了解了 FCC 等一票 5G 模块的知识（可能了解的还不够深入），但是在插上电脑后还是有一些没有预案的情况：\n》开始识别为 USB Ethernet ，mmcli 找不到这个模块，随后 mmcli 找得到了，如下：\nHardware |         manufacturer: Fibocom Wireless Inc.\n           |                model: FM350-GL\n           |    firmware revision: 81600.0000.00.29.23.16\n           |            supported: gsm-umts, lte\n           |              current: gsm-umts, lte\n  --------------------------------\n  System   |               device: /sys/devices/pci0000:00/0000:00:08.1/0000:06:00.4/usb4/4-2/4-2.2\n           |              physdev: /sys/devices/pci0000:00/0000:00:08.1/0000:06:00.4/usb4/4-2/4-2.2\n           |              drivers: option, rndis_host\n           |               plugin: generic\n           |         primary port: ttyUSB5\n           |                ports: eth1 (net), ttyUSB5 (at), ttyUSB7 (at)\n\n\n再然后就会迷之掉线，又找不到了，连给我输入 AT 命令的机会都不给，最后等一段时间后开始循环这个过程。Esim 还没开始折腾呢，模块都不能正常工作，麻了。\n求大佬指点，操作系统 kali linux 6.12.33+kali-amd64 #1 SMP PREEMPT_DYNAMIC Kali 6.12.33-1kali1 (2025-06-25) x86_64 GNU/Linux",
+      "url": "https://www.v2ex.com/t/1148018",
+      "published_date": "2025-07-27T09:41:19",
+      "source": "V2EX-最新主题",
+      "author": "hairenjun",
+      "summary": "hairenjun: <p>以前买的 EC20 实在是顶不住了，突发奇想然后在海鲜市场淘了一块 FM-350-GL 和转接板准备升级一下，虽然事先查看了很多资料，了解了 FCC 等一票 5G 模块的知识（可能了解的还不够深入），但是在插上电脑后还是有一些没有预案的情况：\n》开始识别为 USB Ethernet ，mmcli 找不到这个模块，随后 mmcli 找得到了，如下：</p>\n<pre><code class=\"language-bash\">Hardware |         manufacturer: Fibocom Wireless Inc.\n           |                model: FM350-GL\n           |    firmware revision: 81600.0000.00.29.23.16\n           |            supported: gsm-umts, lte\n           |              current: gsm-umts, lte\n  -----------------...",
+      "keywords": [
+        "AI"
+      ]
+    },
+    {
+      "title": "好奇用 SOL 入 Phantom 之后换成 V2EX 出来的这些是啥",
+      "content": "huaiyin: 浏览器里看到的记录有那种推广链接这里面能看到一堆批量的，不知道是啥",
+      "url": "https://www.v2ex.com/t/1148017",
+      "published_date": "2025-07-27T09:34:23",
+      "source": "V2EX-最新主题",
+      "author": "huaiyin",
+      "summary": "huaiyin: 浏览器里看到的记录有那种推广链接<br><a target=\"_blank\" href=\"https://www.v2ex.com/i/Tu5e50Yb.png\" rel=\"nofollow noopener\" title=\"在新窗口打开图片 Tu5e50Yb.png\"><img src=\"https://i.v2ex.co/Tu5e50Yb.png\" class=\"embedded_image\" referrerpolicy=\"no-referrer\"></a><br>这里面能看到一堆批量的，不知道是啥<br><a target=\"_blank\" href=\"https://www.v2ex.com/i/Km551Si8.png\" rel=\"nofollow noopener\" title=\"在新窗口打开图片 Km551Si8.png\"><img src=\"https://i.v2ex.co/Km551Si8.png\" class=\"embedded_image\" referrerpolicy=\"no-referrer\"></a>",
+      "keywords": [
+        "AI"
+      ]
+    },
+    {
+      "title": "骑驴找马， Linux 面试凉经分享",
+      "content": "gullitintanni: 前情提要：/t/1139545\n虽然最后我勉强找了份工作，但情况并不是很妙：我接手的那套系统所支撑的业务线被大厂收购了（我入职后才知道这件事），他们有成熟的技术方案，用不到我们这套系统。所以等数据迁移完成后，这套系统将会停用。（谁说的做 infra 比做业务更稳定的啊喂，人家做业务的跑去跟大厂签合同了，我做底层的直接原地失业）\n其实也不完全算是失业，领导说到时候会安排我转岗，去做其他产品线的技术支持，薪资不变。这刚一毕业就去做技术支持，以后的职业生涯怕是离开发越来越远了。我还是有点追求的，所以这些天骑驴找马，继续准备面试。\n我们小县城也没什么开发岗位，我打算往二线及以上城市发展，找 Linux 开发相关的岗位，预期薪资 15k+（综合行情和自身能力，我觉得这个价位是比较合理的）。\n当然众所周知现在求职不容易，投了十几份简历，目前只接到了两个面试，全都一面挂。那就分享一下吧。\n\n首先是一家中小厂，面的游戏服务端岗位。\n微信电话面试，先是简单的自我介绍，然后问项目，问我最近解决的技术挑战。本来打算讲讲我梳理屎山代码的经历的，可是这玩意不结合具体代码不好讲。于是就讲了讲最近做的一个性能优化：\n我们系统里的进程间通信依赖一个消息中间件。其中对于那些需要原样发送的 raw 数据，本来是使用 splice 进行传递。虽然 splice 是 zero-copy 的，但仍然有系统调用开销，尤其是对于那些大量发送小数据包的场景，会影响性能。于是我做了基于 SCM_RIGHTS 的改造，将 fd “发送”给目标进程，从而进程间可以直接收发 raw 数据，无需 broker 对其转发。实测对于大量小数据包的场景，有 5-10% 的延迟和吞吐量改善。\n面试官对其中的一些细节进行了提问，但感觉他似乎并不了解什么是 SCM_RIGHTS 。\n然后就是技术问题环节，以 Linux 八股为主。随便举几个印象比较深的：\n\nLinux 上 Ctrl+Alt+Fx 切换 tty 这个功能是在哪里实现的？如何修改快捷键？\n如果让你写个程序从而 ./changetty 3 切换到 tty3 你如何实现？\n如果让你调试一个 core dump ，但是没有 debug symbol 也没有源码，你的思路是什么？\n如何在 Linux 中实现在执行程序时校验签名的机制？你这样实现，用户有办法绕过么？\n有没有一种实现方法，即使用户有 root 权限也无法绕过？\n你了解过 futexfd 么？为什么它从 Linux 内核中被移除了？\n它的使用场景是什么？如果你有这样的使用场景，你如何用 Linux 现有的功能实现？\n\n其中大部分我只能说个模棱两可，毕竟没实际做过相关内容或深入学习过，只能根据已有知识推测。\n也问了一些网络和算法的八股，但这些是我的弱项，连续几个没答上来，就不再问了。一共持续了大概一个小时吧，最后面试官说，如果有后续，本周之内会再联系。今天已经周日了，应该是挂了。\n\n然后是武汉的一家小厂。虽然是小厂，但是小有名气，家人用过他们的产品也觉得不错。\n先是让我登进他们内网的一个平台（应该是搭的开源 OJ 平台）做题。四道编程题，语言 C/C++/Go/Rust 自选，时间 60 分钟，允许在本地编写然后复制到页面中提交。\n前三道不算太难，思路明确，分别是回溯、贪心、动归。如果对标 leetcode 应该稍低于 medium 的平均难度。还算顺利地做出来了（但不能确定是否处理好了所有的边界条件，因为提交后没有提示通过了多少测试用例），第四道没有思路，时间也不够了（后来查了下也可以贪心）。\n本来以为挂了，但是转天突然收到了面试邀约。\n先是问项目。比起工作中的内容，面试官对我的开源项目更感兴趣（虽然最多的也只有十几个 star ），而且比起实现细节，更关心技术选型的过程和最终敲定方案的理由。\n然后是一道场景题：实现一个简易的 terminal pager 。要求是既能支持常规文件，也能支持管道这种 non-seekable stream 。而且要控制好缓存逻辑，不能因为数据量太大而爆内存。支持的命令不需要太多，能翻页和跳转到首尾行即可（也就是 less 的 j/k/g/G ）。\n还是 60 分钟，语言从 C/C++/Go/Rust 中自选，编辑器和工具链用我自己电脑上的，允许查资料（问 AI 也行），但是要全程屏幕共享，做题的过程也会被打分。\n本来我以为这个挺简单，甚至还玩起了花活，支持了一下 alternate screen 。然后很快发现时间不够用了。要想正确实现 pager ，还是挺考验编程能力的。\n于是我果断放弃了支持 soft wrap ，先把最基本的显示错乱的 bug 解决了。在时间结束的前一分钟，本来以为大功告成，突然 segfault 了，十分尴尬（后来看了下，是没处理好边界条件的原因）。但我自认为表现得还不错，完成度挺高的了，应该能过。\n然而今天刚刚收到邮件通知，面试没过。面评里写到：有一定的计算机基础和编程能力，但对于代码细节的掌控还有所欠缺，恐难以胜任。\nemm ，好吧，这确实是我的不足，需要在工程实践中逐步提高。\n\n接下来我会继续充电，不断提高自己，寻找合适的工作机会。大家如果有什么建议，或者想吐槽自己的面试经历，也欢迎留言讨论。",
+      "url": "https://www.v2ex.com/t/1148016",
+      "published_date": "2025-07-27T09:32:55",
+      "source": "V2EX-最新主题",
+      "author": "gullitintanni",
+      "summary": "gullitintanni: <p>前情提要：<a href=\"https://v2ex.com/t/1139545\" rel=\"nofollow\">/t/1139545</a></p>\n<p>虽然最后我勉强找了份工作，但情况并不是很妙：我接手的那套系统所支撑的业务线被大厂收购了（我入职后才知道这件事），他们有成熟的技术方案，用不到我们这套系统。所以等数据迁移完成后，这套系统将会停用。（谁说的做 infra 比做业务更稳定的啊喂，人家做业务的跑去跟大厂签合同了，我做底层的直接原地失业）</p>\n<p>其实也不完全算是失业，领导说到时候会安排我转岗，去做其他产品线的技术支持，薪资不变。这刚一毕业就去做技术支持，以后的职业生涯怕是离开发越来越远了。我还是有点追求的，所以这些天骑驴找马，继续准备面试。</p>\n<p>我们小县城也没什么开发岗位，我打算往二线及以上城市发展，找 Linux 开发相关的岗位，预期薪资 15k+（综合行情和自身能力，我觉得这个价位是比较合理的）。</p>\n<p>当然众所周知现在求职不容易，投了十几份简历，目前只接到了两个面试，全都一面挂。那就分享一下吧。</p>\n<...",
+      "keywords": [
+        "AI"
+      ]
+    },
+    {
+      "title": "Claude Code 考虑将目前的 5 小时限制改为周限制",
+      "content": "mogutouer: 原帖：https://www.reddit.com/r/ClaudeAI/comments/1ma3s58/weekly_limits_are_coming/现在是 MAX x20 套餐，默认的设置是 opus 一半剩下的 sonnet ，我只触发过一次限制，最多等小于 5 个小时。如果说改成周限制，那么如果你周三就把额度用完，剩下几天啥也干不了了。我不知道是不是受兔子镜像站影响，毕竟正常人类不可能 24 小时高强度的对话，或许这个自助餐超出了他的成本？如果说 x20 MAX 都不能一个人正常工作畅用，那就太让人不爽了，并且他不会告诉你用了多少还有多少，这个限额目前非常模糊。各位有什么评论",
+      "url": "https://www.v2ex.com/t/1148013",
+      "published_date": "2025-07-27T09:26:37",
+      "source": "V2EX-最新主题",
+      "author": "mogutouer",
+      "summary": "mogutouer: 原帖：<br><a target=\"_blank\" href=\"https://www.reddit.com/r/ClaudeAI/comments/1ma3s58/weekly_limits_are_coming/\" rel=\"nofollow noopener\">https://www.reddit.com/r/ClaudeAI/comments/1ma3s58/weekly_limits_are_coming/</a><br><br>现在是 MAX x20 套餐，默认的设置是 opus 一半剩下的 sonnet ，我只触发过一次限制，最多等小于 5 个小时。<br><br>如果说改成周限制，那么如果你周三就把额度用完，剩下几天啥也干不了了。<br><br>我不知道是不是受兔子镜像站影响，毕竟正常人类不可能 24 小时高强度的对话，或许这个自助餐超出了他的成本？<br><br>如果说 x20 MAX 都不能一个人正常工作畅用，那就太让人不爽了，并且他不会告诉你用了多少还有多少，这个限额目前非常模糊。<br><br>各位有什么评论",
+      "keywords": [
+        "AI"
+      ]
+    },
+    {
+      "title": "招聘： PM+前端工程师 人工智能工程师（AI Engineer） UI/UX 设计师 以下每个职位 3+HC： Flutter、DevOps、大数据、PM、Golang、测试",
+      "content": "justinX: Position 一：PM+前端工程师Job Type: Full-Time, RemoteIndustry: AI+Web3职位概览我们寻找一位在加密货币交易所或 AI 产品领域具有深厚经验的 agentic AI 金融产品交易所的产品 UX 设计（ Figma 、交易产品 UX 设计）+前端工程 AI 辅助实现（ Flutter 、React ）的产品设计工程师，为链上股票现货（ Solana ）、期货、期权和新时代数据资产的交易平台设计卓越的用户体验。你将与产品经理和 AI 研究团队密切合作，借鉴顶级加密平台（如 Hyperliquid 、GMGN.ai 、axiom.trade ）的优点，致力于将 10 倍杠杆股票、股票期权推广到能让 agentic AI 帮助人类进行交易；并且将 MCP （模型上下文协议）打造成 AI 时代新的数据资产。理想候选人熟练使用 AI 驱动的工具（如 Lovable 、Cursor 、Bolt.new 、v0.dev 、Replit ）和 Figma 的 AI 代码生成功能，能像素级复制优秀产品特性，负责开发我们的交易所前端，并且熟悉其他交易所产品，如 Hyperliquid 、GMGN.ai 、Robinhood 、Futu Options 、Rockflow 等。职位要求● 作为产品设计工程师，端到端负责交易所的前端体验设计：● Figma 专家：● 金融/交易所产品思维：● 具备链上现货（ Solana ）、期货、期权及数据资产交易所的产品设计经验，理解关键业务流程及用户痛点；● AI 辅助前端实现：● 熟练使用 Flutter 或 React ，能结合 AI 编程工具（ Cursor 、Lovable 、Bolt.new 等）自动生成、优化代码；● AI 服务集成：● 熟悉调用 LLM API 、多模态 Agent 系统，并能在设计稿中准确表达接口交互与数据流；● 沟通与自驱：● 中文、英文书面和口头沟通俱佳，能撰写清晰设计规范和产品文档；● 强烈的自我驱动与学习能力，能从 0 到 1 快速推动 AI Native 交易所前端落地。加分项● 深度使用 Claude Code, Gemini CLI, Windsurf 、Cursor, Lovable 等 AI 编程工具，有实战经验，是 10X 工程师或者有出色感觉的产品设计者。● 有交易所、金融系统等高交互性前端项目经验，熟悉交易相关业务逻辑。最好有过 ai native （ chatgpt 之后的 LLM based AI 产品的产品设计和前端实现经验）；最好 end2end 上线过产品到 iOS 和 Android 。● 曾参与开源项目、有贡献记录，或长期维护技术博客/作品集展示网站。Position 二：人工智能工程师（ AI Engineer ）Job Type: Full-Time, RemoteIndustry: AI+Web3Job Description / 职位描述正在寻找有才华且具有使命感的人工智能工程师（ AI Engineer ），共同塑造开放式 AI Agent 生态的未来。在该岗位，你将负责在公司生态系统内创新并开发 AI 系统。如果你热衷于利用大语言模型（ LLMs ）与机器学习，创造前沿的 AI 系统，欢迎加入我们！Key Responsibilities / 主要职责● 设计、构建并优化整合结构化与非结构化数据的 Agent 工作流，构建知识图谱与偏好嵌入，实现设备端个性化 AI 。● 架构并实现可扩展的后端系统，集成 API ，支持数据检索与模型交互流程优化。● 与团队密切合作，开发超越 Llama Index 与 Langchain 的 LLM Action Agent 框架，用于工具构建与调用，持续推动 AI 工具链演进。● 与大小语言模型 API 协同工作，提升检索、嵌入与函数调用能力，适配个性化助手与意图匹配场景。● 基于 PyTorch 应用机器学习技术，助力数据处理与建模的前沿探索。● 微调并部署语言与 Action 模型，实验不同数据集，持续优化效果，提供多样化用户需求的定制化解决方案。Requirements / 任职要求● 计算机科学、人工智能、数据科学或相关领域的本科学历或硕士学历。● 精通 Python 、Java 等编程语言，熟练掌握 TensorFlow 、PyTorch 、Scikit-learn 等机器学习库。● 扎实掌握机器学习与深度学习算法，包括监督/无监督学习、自然语言处理（ NLP ）、强化学习与神经网络等。● 具备云平台（如 AWS 、Google Cloud 或 Azure ）或容器化环境（如 Docker 、Kubernetes ）或移动设备的模型部署经验。● 熟悉知识图谱、嵌入技术、数据管道及 Langchain 、Llama Index 等框架者优先。● 具备在快节奏、动态团队环境中跨部门协作能力，推动 AI 技术落地产品。Preferred Qualifications / 加分项● 拥有自然语言处理（ NLP ）与大型语言模型（ LLMs ）相关经验。● 熟悉 MLOps 实践与生产环境 AI 系统监控工具。● 有 A/B 测试、优化与模型可解释性相关经验。Benefits / 薪酬与福利● 具备竞争力的薪资与股权激励。● 健康、牙科与视力保险。● 弹性工作时间与远程办公选项。● 丰富的成长与职业发展机会。● 开放包容、创新为本的公司文化。Position 三：UI/UX 设计师Job Type: Full-Time, RemoteIndustry: AI+Web3职位概述： 我们正在寻找一名创意且有经验的 UI/UX 设计师，负责设计和优化用户界面及用户体验。您将与产品和技术团队紧密合作，确保我们的区块链和 DeFi 产品具有直观、美观且易用的用户体验。主要职责：● 用户界面设计： 设计具有视觉吸引力且功能性强的用户界面。● 用户体验优化： 基于用户反馈和数据分析，不断改进产品的用户体验。● 设计规范制定： 创建并维护设计风格指南，确保产品的一致性。● 跨团队协作： 与产品经理、开发人员及其他利益相关者紧密合作，将设计概念转化为实际产品。● 原型设计与测试： 创建交互式原型，进行用户测试并收集反馈。任职要求：● 经验要求：2-4 年 UI/UX 设计经验，有区块链或金融科技领域经验者优先。● 设计工具熟悉度： 精通 Sketch 、Figma 、Adobe XD 等设计工具。● 用户导向： 对用户体验有深刻理解，能够从用户需求出发设计产品。● 沟通协作能力： 良好的跨团队协作能力，能够有效传达设计理念。● 创新精神： 积极探索前沿设计趋势并将其应用于工作中。Position 四：Flutter （ app ）Job Type: Full-Time, RemoteIndustry: Web3PS:1 、 双一流/211 计算机相关专业本科及以上学历，3-7 年工作经验，2 、熟悉 Dart ，对 Flutter 组件化有一定的理解和实践，3 、负责公司 Web3/金融产品的移动端 Flutter 开发，能够独立分析、根据需求进行设计，并完成相应的代码编写。4 、有 Socket 处理、K-line 或 ioslate 经验者优先。5 、有股票、Web3/金融产品相关经验者优先。Position 五：DevOps 工程师Job Type：Full-Time, RemoteIndustry: Web3PS （目前人 Base 在海外）：1 、计算机相关专业本科学历，3/10 年工作经验，2 、熟悉 AWS 和 GCP 等云服务，3 、精通 Linux/UNIX 操作系统维护，熟悉在 Linux 平台上配置各种常用服务（如负载均衡、DNS 、CDN 、WAF 等，4 、具有较强的故障排除和问题解决能力，5 、熟悉配置管理软件，如 ansible/vault 、saltstack 、terraform 等，6 、良好的开发技能，具有 Python 、Golang 等语言的开发经验。Position 六：大数据开发工程师Job Type：Full-Time, RemoteIndustry: Web3PS （目前人 Base 在海外）：1 、计算机科学、信息技术或相关专业的学士学位，2 、至少 3 年的大数据开发和数据处理经验，3 、精通 Hadoop 、Flink 、Kafka 和其他大数据技术，4 、具有数据建模和数据库设计经验，5 、具有丰富的数据安全性、合规性知识，以及解决问题和排除故障的技能。Position 七：Product ManagerJob Type：Full-Time, RemoteIndustry: Web3PS （目前人 Base 在海外）：1 、本科及以上学历，中英文精通，3 年以上财务产品经验，2 、主导财务产品设计与开发，用户研究与场景梳理，产品运营，3 、拥有财务相关背景，理解财务领域的基本操作和流程，4 、具备流畅的英语口语和书写能力的优先考虑。Position 八：Golang 工程师Job Type：Full-Time, RemoteIndustry: Web3/ExchangePS：1 、211 本科及以上计算机专业，3/10 年工作经验，2 、熟练掌握 Golang 高并发编程，并理解其原理。3 、丰富的 GoZero 、Gin 和其他 Golang 框架经验。4 、熟练掌握中间件技术，包括 MySQL 、Redis 和 Kafka ，以及它们的基本原理。5 、开发和维护分布式微服务架构的能力。Position 九：测试工程师Job Type：Full-Time, RemoteIndustry: Web3PS：1 、重点本科/211 及以上，1-5 年软件测试（主要是 2C 端）工作经验即可，2 、自学能力强，精通测试程序和测试用例设计方法，并能主动进行进一步的技术研究，3 、具有自动化测试框架（如 Selenium 、Appium 、Pytest ）方面的经验，4 、具备 API 测试方面的工作知识。对 HTTP 、WebSocket 、JSON 有深刻理解和丰富经验，5 、web3 行业经验加分。Position 十：前端工程师（ Nodejs / React ）Job Type: Full-Time, RemoteIndustry: Web3PS:1 、211 计算机、软件工程等相关专业本科及以上学历；2 、深入理解至少一种主流前端框架（ React/Vue/Angular ）；3 、5 年以上前端开发经验，3 年以上 React/Node.js 中大型项目实战经验，精通 React/Node.js 生态（ Express/Koa/NestJS ），熟悉高并发、性能调优、内存泄漏排查。请携带简历咨询，推荐朋友合作成功有酬劳，TG：@jtx_2023",
+      "url": "https://www.v2ex.com/t/1148010",
+      "published_date": "2025-07-27T09:08:02",
+      "source": "V2EX-最新主题",
+      "author": "justinX",
+      "summary": "justinX: Position 一：PM+前端工程师<br>Job Type: Full-Time, Remote<br>Industry: AI+Web3<br>职位概览<br>我们寻找一位在加密货币交易所或 AI 产品领域具有深厚经验的 agentic AI 金融产品交易所的产品 UX 设计（ Figma 、交易产品 UX 设计）+前端工程 AI 辅助实现（ Flutter 、React ）的产品设计工程师，为链上股票现货（ Solana ）、期货、期权和新时代数据资产的交易平台设计卓越的用户体验。<br>你将与产品经理和 AI 研究团队密切合作，借鉴顶级加密平台（如 Hyperliquid 、<a target=\"_blank\" href=\"http://gmgn.ai/\" rel=\"nofollow noopener\">GMGN.ai</a> 、axiom.trade ）的优点，致力于将 10 倍杠杆股票、股票期权推广到能让 agentic AI 帮助人类进行交易；并且将 MCP （模型上下文协议）打造成 AI 时代新的数据资产。理想候选人熟练使用 AI 驱动的工具（如 L...",
+      "keywords": [
+        "AI"
+      ]
+    }
+  ]
+}

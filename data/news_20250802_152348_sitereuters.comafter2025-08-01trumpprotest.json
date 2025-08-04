@@ -1,0 +1,509 @@
+{
+  "metadata": {
+    "count": 50,
+    "saved_at": "2025-08-02T15:23:48.886066",
+    "format": "json"
+  },
+  "news": [
+    {
+      "title": "Kugler resigning from Fed, opening door to Trump appointment",
+      "content": "Kugler resigning from Fed, opening door to Trump appointment",
+      "url": "https://www.reuters.com/world/us/kugler-resigning-fed-opening-door-trump-appointment-2025-08-01/",
+      "published_date": "2025-08-02T15:23:22.986250",
+      "source": "10 hours ago",
+      "author": null,
+      "summary": "Kugler resigning from Fed, opening door to Trump appointment",
+      "keywords": []
+    },
+    {
+      "title": "Swiss stunned by US tariff hike, seek negotiated solution",
+      "content": "Swiss stunned by US tariff hike, seek negotiated solution",
+      "url": "https://www.reuters.com/world/europe/swiss-stunned-by-us-tariff-hike-seek-negotiated-solution-2025-08-01/",
+      "published_date": "2025-08-02T15:23:22.988011",
+      "source": "13 hours ago",
+      "author": null,
+      "summary": "Swiss stunned by US tariff hike, seek negotiated solution",
+      "keywords": []
+    },
+    {
+      "title": "Second US appeals court open to blocking Trump's birthright citizenship order",
+      "content": "Second US appeals court open to blocking Trump's birthright citizenship order",
+      "url": "https://www.reuters.com/legal/government/second-us-appeals-court-open-blocking-trumps-birthright-citizenship-order-2025-08-01/",
+      "published_date": "2025-08-02T15:23:22.989164",
+      "source": "11 hours ago",
+      "author": null,
+      "summary": "Second US appeals court open to blocking Trump's birthright citizenship order",
+      "keywords": []
+    },
+    {
+      "title": "Exclusive: Pakistan to buy first-ever US oil cargo in Cnergyico deal with Vitol",
+      "content": "Exclusive: Pakistan to buy first-ever US oil cargo in Cnergyico deal with Vitol",
+      "url": "https://www.reuters.com/business/energy/pakistan-buy-first-ever-us-oil-cargo-cnergyico-deal-with-vitol-2025-07-31/",
+      "published_date": "2025-08-02T15:23:22.990206",
+      "source": "16 hours ago",
+      "author": null,
+      "summary": "Exclusive: Pakistan to buy first-ever US oil cargo in Cnergyico deal with Vitol",
+      "keywords": []
+    },
+    {
+      "title": "Court allows Trump to end union bargaining for federal workers",
+      "content": "Court allows Trump to end union bargaining for federal workers",
+      "url": "https://www.reuters.com/legal/government/court-allows-trump-end-union-bargaining-federal-workers-2025-08-01/",
+      "published_date": "2025-08-02T15:23:22.991209",
+      "source": "8 hours ago",
+      "author": null,
+      "summary": "Court allows Trump to end union bargaining for federal workers",
+      "keywords": []
+    },
+    {
+      "title": "Global shares in red after US jobs data, Trump's tariff salvo",
+      "content": "Global shares in red after US jobs data, Trump's tariff salvo",
+      "url": "https://www.reuters.com/world/china/global-markets-wrapup-3-2025-08-01/",
+      "published_date": "2025-08-02T15:23:22.992221",
+      "source": "18 hours ago",
+      "author": null,
+      "summary": "Global shares in red after US jobs data, Trump's tariff salvo",
+      "keywords": []
+    },
+    {
+      "title": "Trump increases tariff on Canada to 35% from 25%, cites fentanyl",
+      "content": "Trump increases tariff on Canada to 35% from 25%, cites fentanyl",
+      "url": "https://www.reuters.com/world/americas/trump-increases-tariff-canada-35-25-cites-fentanyl-2025-07-31/",
+      "published_date": "2025-08-02T15:23:22.993225",
+      "source": "10 hours ago",
+      "author": null,
+      "summary": "Trump increases tariff on Canada to 35% from 25%, cites fentanyl",
+      "keywords": []
+    },
+    {
+      "title": "Colombia ex-president Uribe sentenced to 12 years of house arrest, will appeal",
+      "content": "Colombia ex-president Uribe sentenced to 12 years of house arrest, will appeal",
+      "url": "https://www.reuters.com/world/americas/colombia-ex-president-uribe-sentenced-12-years-house-arrest-will-appeal-2025-08-01/",
+      "published_date": "2025-08-02T15:23:22.994219",
+      "source": "9 hours ago",
+      "author": null,
+      "summary": "Colombia ex-president Uribe sentenced to 12 years of house arrest, will appeal",
+      "keywords": []
+    },
+    {
+      "title": "Relief in Southeast Asia as Trump's tariffs level playing field",
+      "content": "Relief in Southeast Asia as Trump's tariffs level playing field",
+      "url": "https://www.reuters.com/world/asia-pacific/relief-southeast-asia-trumps-tariffs-level-playing-field-2025-08-01/",
+      "published_date": "2025-08-02T15:23:22.995117",
+      "source": "23 hours ago",
+      "author": null,
+      "summary": "Relief in Southeast Asia as Trump's tariffs level playing field",
+      "keywords": []
+    },
+    {
+      "title": "Trump says Brazil's Lula can call him anytime",
+      "content": "Trump says Brazil's Lula can call him anytime",
+      "url": "https://www.reuters.com/world/americas/trump-says-brazils-lula-can-call-him-anytime-2025-08-01/",
+      "published_date": "2025-08-02T15:23:22.997072",
+      "source": "7 hours ago",
+      "author": null,
+      "summary": "Trump says Brazil's Lula can call him anytime",
+      "keywords": []
+    },
+    {
+      "title": "Trump orders nuclear submarines moved after Russian 'provocative statements'",
+      "content": "Trump orders nuclear submarines moved after Russian 'provocative statements'",
+      "url": "https://www.reuters.com/world/trump-orders-nuclear-submarines-moved-after-russian-provocative-statements-2025-08-01/",
+      "published_date": "2025-08-02T15:23:29.749261",
+      "source": "8 hours ago",
+      "author": null,
+      "summary": "Trump orders nuclear submarines moved after Russian 'provocative statements'",
+      "keywords": []
+    },
+    {
+      "title": "Trump hits dozens more countries with steep tariffs",
+      "content": "Trump hits dozens more countries with steep tariffs",
+      "url": "https://www.reuters.com/world/americas/trump-hits-dozens-more-countries-with-steep-tariffs-2025-07-31/",
+      "published_date": "2025-08-02T15:23:29.750207",
+      "source": "22 hours ago",
+      "author": null,
+      "summary": "Trump hits dozens more countries with steep tariffs",
+      "keywords": []
+    },
+    {
+      "title": "American history museum removes Trump's name from impeachment exhibit",
+      "content": "American history museum removes Trump's name from impeachment exhibit",
+      "url": "https://www.reuters.com/world/us/american-history-museum-removes-trumps-name-impeachment-exhibit-2025-08-01/",
+      "published_date": "2025-08-02T15:23:29.751092",
+      "source": "10 hours ago",
+      "author": null,
+      "summary": "American history museum removes Trump's name from impeachment exhibit",
+      "keywords": []
+    },
+    {
+      "title": "Cambodia to nominate Donald Trump for Nobel Peace Prize, says deputy PM",
+      "content": "Cambodia to nominate Donald Trump for Nobel Peace Prize, says deputy PM",
+      "url": "https://www.reuters.com/world/asia-pacific/cambodia-nominate-donald-trump-nobel-peace-prize-says-deputy-pm-2025-08-01/",
+      "published_date": "2025-08-02T15:23:29.752041",
+      "source": "21 hours ago",
+      "author": null,
+      "summary": "Cambodia to nominate Donald Trump for Nobel Peace Prize, says deputy PM",
+      "keywords": []
+    },
+    {
+      "title": "Trump eyes bringing Azerbaijan, Central Asian nations into Abraham Accords, sources say",
+      "content": "Trump eyes bringing Azerbaijan, Central Asian nations into Abraham Accords, sources say",
+      "url": "https://www.reuters.com/world/asia-pacific/trump-eyes-bringing-azerbaijan-central-asian-nations-into-abraham-accords-2025-08-01/",
+      "published_date": "2025-08-02T15:23:29.753167",
+      "source": "14 hours ago",
+      "author": null,
+      "summary": "Trump eyes bringing Azerbaijan, Central Asian nations into Abraham Accords, sources say",
+      "keywords": []
+    },
+    {
+      "title": "Trump: Fed board should assume control if Powell won't lower interest rates",
+      "content": "Trump: Fed board should assume control if Powell won't lower interest rates",
+      "url": "https://www.reuters.com/world/us/trump-fed-board-should-assume-control-if-powell-wont-lower-interest-rates-2025-08-01/",
+      "published_date": "2025-08-02T15:23:29.754150",
+      "source": "19 hours ago",
+      "author": null,
+      "summary": "Trump: Fed board should assume control if Powell won't lower interest rates",
+      "keywords": []
+    },
+    {
+      "title": "Ghislaine Maxwell moved to prison camp, Trump says no plea for pardon",
+      "content": "Ghislaine Maxwell moved to prison camp, Trump says no plea for pardon",
+      "url": "https://www.reuters.com/world/us/ghislaine-maxwell-moved-prison-camp-trump-says-no-plea-pardon-2025-08-01/",
+      "published_date": "2025-08-02T15:23:29.755639",
+      "source": "3 hours ago",
+      "author": null,
+      "summary": "Ghislaine Maxwell moved to prison camp, Trump says no plea for pardon",
+      "keywords": []
+    },
+    {
+      "title": "Putin, facing Trump deadline, signals no change in Russia's stance on Ukraine",
+      "content": "Putin, facing Trump deadline, signals no change in Russia's stance on Ukraine",
+      "url": "https://www.reuters.com/world/europe/putin-facing-trump-deadline-signals-no-change-russias-stance-ukraine-2025-08-01/",
+      "published_date": "2025-08-02T15:23:29.756568",
+      "source": "15 hours ago",
+      "author": null,
+      "summary": "Putin, facing Trump deadline, signals no change in Russia's stance on Ukraine",
+      "keywords": []
+    },
+    {
+      "title": "Trump fires US labor official over data and gets earlier than expected chance to reshape Fed",
+      "content": "Trump fires US labor official over data and gets earlier than expected chance to reshape Fed",
+      "url": "https://www.reuters.com/legal/litigation/trump-fires-us-labor-official-over-data-gets-earlier-than-expected-chance-2025-08-01/",
+      "published_date": "2025-08-02T15:23:29.757460",
+      "source": "8 hours ago",
+      "author": null,
+      "summary": "Trump fires US labor official over data and gets earlier than expected chance to reshape Fed",
+      "keywords": []
+    },
+    {
+      "title": "South Africa plans measures to support exporters hit by Trump tariffs",
+      "content": "South Africa plans measures to support exporters hit by Trump tariffs",
+      "url": "https://www.reuters.com/world/africa/south-africa-plans-measures-support-exporters-hit-by-trump-tariffs-2025-08-01/",
+      "published_date": "2025-08-02T15:23:29.758409",
+      "source": "16 hours ago",
+      "author": null,
+      "summary": "South Africa plans measures to support exporters hit by Trump tariffs",
+      "keywords": []
+    },
+    {
+      "title": "India engaged in further trade talks with US, Indian government source says",
+      "content": "India engaged in further trade talks with US, Indian government source says",
+      "url": "https://www.reuters.com/world/india/india-engaged-further-trade-talks-with-us-indian-government-source-says-2025-08-01/",
+      "published_date": "2025-08-02T15:23:36.311048",
+      "source": "12 hours ago",
+      "author": null,
+      "summary": "India engaged in further trade talks with US, Indian government source says",
+      "keywords": []
+    },
+    {
+      "title": "Markets dive after Trump hits more countries with steep tariffs",
+      "content": "Markets dive after Trump hits more countries with steep tariffs",
+      "url": "https://www.reuters.com/world/china/markets-dive-after-trump-hits-more-countries-with-steep-tariffs-2025-08-01/",
+      "published_date": "2025-08-02T15:23:36.312049",
+      "source": "11 hours ago",
+      "author": null,
+      "summary": "Markets dive after Trump hits more countries with steep tariffs",
+      "keywords": []
+    },
+    {
+      "title": "EU brands turn to obscure customs clause to soften blow of Trump's tariffs",
+      "content": "EU brands turn to obscure customs clause to soften blow of Trump's tariffs",
+      "url": "https://www.reuters.com/business/eu-brands-turn-obscure-customs-clause-soften-blow-trumps-tariffs-2025-08-01/",
+      "published_date": "2025-08-02T15:23:36.313078",
+      "source": "18 hours ago",
+      "author": null,
+      "summary": "EU brands turn to obscure customs clause to soften blow of Trump's tariffs",
+      "keywords": []
+    },
+    {
+      "title": "Lesotho textiles to struggle even with lower 15% Trump tariff, minister says",
+      "content": "Lesotho textiles to struggle even with lower 15% Trump tariff, minister says",
+      "url": "https://www.reuters.com/world/africa/lesotho-textiles-struggle-even-with-lower-15-trump-tariff-minister-says-2025-08-01/",
+      "published_date": "2025-08-02T15:23:36.313976",
+      "source": "16 hours ago",
+      "author": null,
+      "summary": "Lesotho textiles to struggle even with lower 15% Trump tariff, minister says",
+      "keywords": []
+    },
+    {
+      "title": "US states sue over Trump's targeting of providers of transgender youth medical care",
+      "content": "US states sue over Trump's targeting of providers of transgender youth medical care",
+      "url": "https://www.reuters.com/legal/government/us-states-sue-over-trumps-targeting-providers-transgender-youth-medical-care-2025-08-01/",
+      "published_date": "2025-08-02T15:23:36.314948",
+      "source": "14 hours ago",
+      "author": null,
+      "summary": "US states sue over Trump's targeting of providers of transgender youth medical care",
+      "keywords": []
+    },
+    {
+      "title": "Bosnian Serb leader Dodik vows to defy political ban, write to Trump",
+      "content": "Bosnian Serb leader Dodik vows to defy political ban, write to Trump",
+      "url": "https://www.reuters.com/world/europe/bosnian-serb-leader-dodik-vows-defy-political-ban-write-trump-2025-08-01/",
+      "published_date": "2025-08-02T15:23:36.315828",
+      "source": "16 hours ago",
+      "author": null,
+      "summary": "Bosnian Serb leader Dodik vows to defy political ban, write to Trump",
+      "keywords": []
+    },
+    {
+      "title": "Taiwan says 20% U.S tariff is temporary; separate rate for chips in focus",
+      "content": "Taiwan says 20% U.S tariff is temporary; separate rate for chips in focus",
+      "url": "https://www.reuters.com/world/asia-pacific/taiwan-says-20-us-tariff-is-temporary-separate-rate-chips-focus-2025-08-01/",
+      "published_date": "2025-08-02T15:23:36.317001",
+      "source": "23 hours ago",
+      "author": null,
+      "summary": "Taiwan says 20% U.S tariff is temporary; separate rate for chips in focus",
+      "keywords": []
+    },
+    {
+      "title": "South Korea says it has no written pact on US trade deal",
+      "content": "South Korea says it has no written pact on US trade deal",
+      "url": "https://www.reuters.com/world/asia-pacific/south-korea-says-it-has-no-written-pact-us-trade-deal-2025-08-01/",
+      "published_date": "2025-08-02T15:23:36.317951",
+      "source": "20 hours ago",
+      "author": null,
+      "summary": "South Korea says it has no written pact on US trade deal",
+      "keywords": []
+    },
+    {
+      "title": "Investors react to Kugler's resignation, firing of BLS commissioner",
+      "content": "Investors react to Kugler's resignation, firing of BLS commissioner",
+      "url": "https://www.reuters.com/business/view-investors-react-kuglers-resignation-firing-of-bls-commissioner-2025-08-01/",
+      "published_date": "2025-08-02T15:23:36.318757",
+      "source": "11 hours ago",
+      "author": null,
+      "summary": "Investors react to Kugler's resignation, firing of BLS commissioner",
+      "keywords": []
+    },
+    {
+      "title": "Six arrested over Serbia railway station roof collapse",
+      "content": "Six arrested over Serbia railway station roof collapse",
+      "url": "https://www.reuters.com/world/six-arrested-over-serbia-railway-station-roof-collapse-2025-08-01/",
+      "published_date": "2025-08-02T15:23:36.319555",
+      "source": "15 hours ago",
+      "author": null,
+      "summary": "Six arrested over Serbia railway station roof collapse",
+      "keywords": []
+    },
+    {
+      "title": "Global stock index sinks with dollar, bond yields after weak US jobs data",
+      "content": "Global stock index sinks with dollar, bond yields after weak US jobs data",
+      "url": "https://www.reuters.com/world/china/global-markets-wrapup-9-graphics-2025-08-01/",
+      "published_date": "2025-08-02T15:23:42.793329",
+      "source": "9 hours ago",
+      "author": null,
+      "summary": "Global stock index sinks with dollar, bond yields after weak US jobs data",
+      "keywords": []
+    },
+    {
+      "title": "Corporation for Public Broadcasting to close after funding cut, in blow to local media",
+      "content": "Corporation for Public Broadcasting to close after funding cut, in blow to local media",
+      "url": "https://www.reuters.com/world/us/corporation-public-broadcasting-close-after-funding-cut-blow-local-media-2025-08-01/",
+      "published_date": "2025-08-02T15:23:42.794660",
+      "source": "10 hours ago",
+      "author": null,
+      "summary": "Corporation for Public Broadcasting to close after funding cut, in blow to local media",
+      "keywords": []
+    },
+    {
+      "title": "Fed's Kugler resigning from Fed effective Aug 8",
+      "content": "Fed's Kugler resigning from Fed effective Aug 8",
+      "url": "https://www.reuters.com/world/us/feds-kugler-resigning-fed-effective-aug-8-2025-08-01/",
+      "published_date": "2025-08-02T15:23:42.796857",
+      "source": "11 hours ago",
+      "author": null,
+      "summary": "Fed's Kugler resigning from Fed effective Aug 8",
+      "keywords": []
+    },
+    {
+      "title": "Exclusive: US plans to fund deportations from Costa Rica, document shows",
+      "content": "Exclusive: US plans to fund deportations from Costa Rica, document shows",
+      "url": "https://www.reuters.com/world/americas/us-plans-fund-deportations-costa-rica-document-shows-2025-08-01/",
+      "published_date": "2025-08-02T15:23:42.798276",
+      "source": "19 hours ago",
+      "author": null,
+      "summary": "Exclusive: US plans to fund deportations from Costa Rica, document shows",
+      "keywords": []
+    },
+    {
+      "title": "US labor market cracks widen as job growth hits stall speed",
+      "content": "US labor market cracks widen as job growth hits stall speed",
+      "url": "https://www.reuters.com/world/us/us-labor-market-cracks-widen-job-growth-hits-stall-speed-2025-08-01/",
+      "published_date": "2025-08-02T15:23:42.799495",
+      "source": "11 hours ago",
+      "author": null,
+      "summary": "US labor market cracks widen as job growth hits stall speed",
+      "keywords": []
+    },
+    {
+      "title": "Gold gains on safe-haven demand, spotlight shifts to US jobs data",
+      "content": "Gold gains on safe-haven demand, spotlight shifts to US jobs data",
+      "url": "https://www.reuters.com/world/china/gold-gains-safe-haven-demand-spotlight-shifts-us-jobs-data-2025-08-01/",
+      "published_date": "2025-08-02T15:23:42.801022",
+      "source": "20 hours ago",
+      "author": null,
+      "summary": "Gold gains on safe-haven demand, spotlight shifts to US jobs data",
+      "keywords": []
+    },
+    {
+      "title": "Dissenting Fed officials Bowman, Waller link votes to job market concerns",
+      "content": "Dissenting Fed officials Bowman, Waller link votes to job market concerns",
+      "url": "https://www.reuters.com/world/us/dissenting-fed-officials-bowman-waller-link-votes-job-market-concerns-2025-08-01/",
+      "published_date": "2025-08-02T15:23:42.802213",
+      "source": "18 hours ago",
+      "author": null,
+      "summary": "Dissenting Fed officials Bowman, Waller link votes to job market concerns",
+      "keywords": []
+    },
+    {
+      "title": "US envoy Witkoff visits the Gaza aid operation that the UN calls unsafe",
+      "content": "US envoy Witkoff visits the Gaza aid operation that the UN calls unsafe",
+      "url": "https://www.reuters.com/world/middle-east/us-envoy-witkoff-visits-gaza-aid-operation-that-un-calls-unsafe-2025-08-01/",
+      "published_date": "2025-08-02T15:23:42.803291",
+      "source": "11 hours ago",
+      "author": null,
+      "summary": "US envoy Witkoff visits the Gaza aid operation that the UN calls unsafe",
+      "keywords": []
+    },
+    {
+      "title": "Dollar tumbles, traders bet on more US rate cuts after weak jobs report",
+      "content": "Dollar tumbles, traders bet on more US rate cuts after weak jobs report",
+      "url": "https://www.reuters.com/world/africa/dollar-tumbles-traders-bet-more-us-rate-cuts-after-weak-jobs-report-2025-08-01/",
+      "published_date": "2025-08-02T15:23:42.804296",
+      "source": "11 hours ago",
+      "author": null,
+      "summary": "Dollar tumbles, traders bet on more US rate cuts after weak jobs report",
+      "keywords": []
+    },
+    {
+      "title": "Indonesia's Mount Lewotobi Laki-laki erupts",
+      "content": "Indonesia's Mount Lewotobi Laki-laki in East Nusa Tenggara Province erupted on Friday, spewing a more than 10 kilometre (6.21 miles) high ash column,...",
+      "url": "https://www.reuters.com/business/environment/indonesias-mount-lewotobi-laki-laki-erupts-2025-08-01/",
+      "published_date": "2025-08-02T15:23:42.806268",
+      "source": "16 hours ago",
+      "author": null,
+      "summary": "Indonesia's Mount Lewotobi Laki-laki in East Nusa Tenggara Province erupted on Friday, spewing a more than 10 kilometre (6.21 miles) high ash column,...",
+      "keywords": []
+    },
+    {
+      "title": "Johannesburg's main airport suffers air traffic control system failure",
+      "content": "Johannesburg's main airport suffers air traffic control system failure",
+      "url": "https://www.reuters.com/world/africa/johannesburgs-main-airport-suffers-air-traffic-control-system-failure-2025-08-01/",
+      "published_date": "2025-08-02T15:23:48.872942",
+      "source": "16 hours ago",
+      "author": null,
+      "summary": "Johannesburg's main airport suffers air traffic control system failure",
+      "keywords": []
+    },
+    {
+      "title": "Bangladesh secures 20% US tariff for garments, exporters relieved",
+      "content": "Bangladesh secures 20% US tariff for garments, exporters relieved",
+      "url": "https://www.reuters.com/world/asia-pacific/bangladesh-secures-20-us-tariff-garments-exporters-relieved-2025-08-01/",
+      "published_date": "2025-08-02T15:23:48.874039",
+      "source": "22 hours ago",
+      "author": null,
+      "summary": "Bangladesh secures 20% US tariff for garments, exporters relieved",
+      "keywords": []
+    },
+    {
+      "title": "US government turmoil stalls thousands of export approvals, sources say",
+      "content": "US government turmoil stalls thousands of export approvals, sources say",
+      "url": "https://www.reuters.com/world/us/us-government-turmoil-stalls-thousands-export-approvals-sources-say-2025-08-01/",
+      "published_date": "2025-08-02T15:23:48.875348",
+      "source": "14 hours ago",
+      "author": null,
+      "summary": "US government turmoil stalls thousands of export approvals, sources say",
+      "keywords": []
+    },
+    {
+      "title": "German police find more damage along railway disrupted by suspected sabotage",
+      "content": "German police find more damage along railway disrupted by suspected sabotage",
+      "url": "https://www.reuters.com/world/german-police-find-more-damage-along-railway-disrupted-by-suspected-sabotage-2025-08-01/",
+      "published_date": "2025-08-02T15:23:48.876263",
+      "source": "22 hours ago",
+      "author": null,
+      "summary": "German police find more damage along railway disrupted by suspected sabotage",
+      "keywords": []
+    },
+    {
+      "title": "US limits official visits to Karachi hotels after threat report",
+      "content": "US limits official visits to Karachi hotels after threat report",
+      "url": "https://www.reuters.com/world/asia-pacific/us-limits-official-visits-karachi-hotels-after-threat-report-2025-08-01/",
+      "published_date": "2025-08-02T15:23:48.877145",
+      "source": "9 hours ago",
+      "author": null,
+      "summary": "US limits official visits to Karachi hotels after threat report",
+      "keywords": []
+    },
+    {
+      "title": "Russia claims capture of Chasiv Yar after 16-month battle",
+      "content": "Russia claims capture of Chasiv Yar after 16-month battle",
+      "url": "https://www.reuters.com/world/europe/russia-claims-capture-chasiv-yar-after-16-month-battle-2025-07-31/",
+      "published_date": "2025-08-02T15:23:48.878026",
+      "source": "1 day ago",
+      "author": null,
+      "summary": "Russia claims capture of Chasiv Yar after 16-month battle",
+      "keywords": []
+    },
+    {
+      "title": "US manufacturing extends slump; factory employment lowest in 5 years",
+      "content": "US manufacturing extends slump; factory employment lowest in 5 years",
+      "url": "https://www.reuters.com/world/us/us-manufacturing-extends-slump-factory-employment-lowest-5-years-2025-08-01/",
+      "published_date": "2025-08-02T15:23:48.879273",
+      "source": "17 hours ago",
+      "author": null,
+      "summary": "US manufacturing extends slump; factory employment lowest in 5 years",
+      "keywords": []
+    },
+    {
+      "title": "US cancels environmental review, grants for long-stalled high-speed rail project",
+      "content": "US cancels environmental review, grants for long-stalled high-speed rail project",
+      "url": "https://www.reuters.com/world/us/us-cancels-environmental-review-grants-long-stalled-high-speed-rail-project-2025-08-01/",
+      "published_date": "2025-08-02T15:23:48.880584",
+      "source": "13 hours ago",
+      "author": null,
+      "summary": "US cancels environmental review, grants for long-stalled high-speed rail project",
+      "keywords": []
+    },
+    {
+      "title": "Ukrainians mourn 31 killed in Russian strike on Kyiv",
+      "content": "Ukrainians mourn 31 killed in Russian strike on Kyiv",
+      "url": "https://www.reuters.com/world/europe/ukrainians-mourn-31-killed-russian-strike-kyiv-2025-08-01/",
+      "published_date": "2025-08-02T15:23:48.882691",
+      "source": "11 hours ago",
+      "author": null,
+      "summary": "Ukrainians mourn 31 killed in Russian strike on Kyiv",
+      "keywords": []
+    },
+    {
+      "title": "Gold rises nearly 2% as US payrolls data boosts rate cut hopes",
+      "content": "Gold rises nearly 2% as US payrolls data boosts rate cut hopes",
+      "url": "https://www.reuters.com/world/china/gold-rises-nearly-2-us-payrolls-data-boosts-rate-cut-hopes-2025-08-01/",
+      "published_date": "2025-08-02T15:23:48.883547",
+      "source": "13 hours ago",
+      "author": null,
+      "summary": "Gold rises nearly 2% as US payrolls data boosts rate cut hopes",
+      "keywords": []
+    }
+  ]
+}

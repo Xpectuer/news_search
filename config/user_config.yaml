@@ -1,0 +1,24 @@
+data_sources:
+  bing_search:
+    default_sites:
+    - www.cnn.com
+    - www.foxnews.com
+    - www.washingtonpost.com
+    - www.nytimes.com
+    - www.bbc.com
+    - reuters.com
+    enabled: true
+    proxy:
+      enabled: true
+      server: http://127.0.0.1:7892
+  google_search:
+    delay: 5
+    enabled: true
+    proxy:
+      enabled: true
+      server: http://127.0.0.1:7892
+  rss:
+    sources:
+    - https://rsshub.app/v2ex/topics/latest
+    - https://rss.cnn.com/rss/edition.rss
+    - https://rsshub.app/zaobao/realtime/china

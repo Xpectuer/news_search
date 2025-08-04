@@ -1,0 +1,58 @@
+# 新闻收集器默认配置
+app:
+  name: "News Agent"
+  version: "1.0.0"
+
+# 数据源配置
+data_sources:
+  rss:
+    enabled: true
+    sources: []  # 用户可以添加RSS源
+    timeout: 30
+    
+  news_api:
+    enabled: false
+    api_key: ""
+    
+  google_search:
+    enabled: false
+    delay: 3  # 请求间隔秒数，避免被封
+    max_results: 50  # 最大结果数
+    headless: true  # 无头模式
+    default_sites: []  # 默认搜索的新闻网站
+    proxy:
+      enabled: false  # 是否启用代理
+      server: ""  # 代理服务器地址，如: http://127.0.0.1:7890
+      username: ""  # 代理用户名（可选）
+      password: ""  # 代理密码（可选）
+    
+  search_engine:
+    enabled: false
+    engines: ["google", "bing"]
+    delay: 2  # 请求间隔秒数
+
+# 存储配置
+storage:
+  format: "json"  # json, csv, parquet
+  directory: "data"
+  filename_template: "news_{date}_{keyword}.{format}"
+  
+# 调度配置
+scheduler:
+  enabled: true
+  default_interval: "24h"  # 默认24小时更新一次
+  time_patterns:
+    daily: "00:00"  # 每日零点
+    hourly: "0"     # 每小时0分
+
+# 搜索配置
+search:
+  default_keywords: []
+  max_results: 100
+  
+# 日志配置
+logging:
+  level: "INFO"
+  file: "logs/news_agent.log"
+  max_size: "10MB"
+  backup_count: 5

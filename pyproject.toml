@@ -1,0 +1,29 @@
+[project]
+name = "news-agent"
+version = "0.1.0"
+description = "新闻收集器 - 支持RSS订阅和多格式存储的CLI工具"
+readme = "README.md"
+authors = [
+    { name = "xpectuer", email = "zhengjiaye@126.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "click>=8.2.1",
+    "feedparser>=6.0.11",
+    "html5lib>=1.1",
+    "pandas>=2.3.1",
+    "pyarrow>=21.0.0",
+    "pyyaml>=6.0.2",
+    "schedule>=1.2.2",
+    "rich>=13.0.0",
+    "playwright>=1.40.0",
+    "beautifulsoup4>=4.12.0",
+    "requests>=2.31.0",
+]
+
+[project.scripts]
+news-agent = "news_agent.cli.main:main"
+
+[build-system]
+requires = ["uv_build>=0.8.2,<0.9.0"]
+build-backend = "uv_build"
