@@ -1,0 +1,99 @@
+{
+  "metadata": {
+    "count": 9,
+    "saved_at": "2025-08-09T21:06:05.752374",
+    "format": "json"
+  },
+  "news": [
+    {
+      "title": "DFRobot FireBeetle 2 ESP32-P4 is a compact board with MIPI DSI/DSI, microphone, WiFi 6, and GPIO headers",
+      "content": "DFRobot FireBeetle 2 ESP32-P4 is a compact board with MIPI DSI/DSI, microphone, WiFi 6, and GPIO headers",
+      "url": "https://www.cnx-software.com/2025/07/15/dfrobot-firebeetle-2-esp32-p4-is-a-compact-board-with-mipi-dsi-dsi-microphone-wifi-6-and-gpio-headers/",
+      "published_date": "2025-08-09T21:05:59.875827",
+      "source": "3 weeks ago",
+      "author": null,
+      "summary": "DFRobot FireBeetle 2 ESP32-P4 is a compact board with MIPI DSI/DSI, microphone, WiFi 6, and GPIO headers",
+      "keywords": []
+    },
+    {
+      "title": "DFRobot's 24GHz mmWave Radar Offers Simple Person Detection — Even If They're Sleeping",
+      "content": "DFRobot's 24GHz mmWave Radar Offers Simple Person Detection — Even If They're Sleeping",
+      "url": "https://www.hackster.io/news/dfrobot-s-24ghz-mmwave-radar-offers-simple-person-detection-even-if-they-re-sleeping-8e7850faf3f4",
+      "published_date": "2025-08-09T21:05:59.876495",
+      "source": "Google News",
+      "author": null,
+      "summary": "DFRobot's 24GHz mmWave Radar Offers Simple Person Detection — Even If They're Sleeping",
+      "keywords": []
+    },
+    {
+      "title": "$79 Raspberry Pi Alternative Comes with Built-in Touch Screen",
+      "content": "$79 Raspberry Pi Alternative Comes with Built-in Touch Screen",
+      "url": "https://www.tomshardware.com/news/dfrobot-unihiker-launches",
+      "published_date": "2025-08-09T21:05:59.877165",
+      "source": "Google News",
+      "author": null,
+      "summary": "$79 Raspberry Pi Alternative Comes with Built-in Touch Screen",
+      "keywords": []
+    },
+    {
+      "title": "DIY Water Quality Meter Using a Turbidity Sensor",
+      "content": "EDN - Voice of the Engineer",
+      "url": "https://www.edn.com/diy-water-quality-meter-using-a-turbidity-sensor/",
+      "published_date": "2025-08-09T21:05:59.877787",
+      "source": "Google News",
+      "author": null,
+      "summary": "EDN - Voice of the Engineer",
+      "keywords": []
+    },
+    {
+      "title": "ADT-Link UT3G USB4 to PCIe adapter can drive NVIDIA or AMD graphics cards",
+      "content": "ADT-Link UT3G USB4 to PCIe adapter can drive NVIDIA or AMD graphics cards",
+      "url": "https://www.cnx-software.com/2024/05/27/adt-link-ut3g-usb4-to-pcie-adapter-can-drive-an-nvidia-rtx4090-gpu/",
+      "published_date": "2025-08-09T21:05:59.878406",
+      "source": "Google News",
+      "author": null,
+      "summary": "ADT-Link UT3G USB4 to PCIe adapter can drive NVIDIA or AMD graphics cards",
+      "keywords": []
+    },
+    {
+      "title": "Hacking The ZH03B Laser Particle Sensor",
+      "content": "Hacking The ZH03B Laser Particle Sensor",
+      "url": "https://hackaday.com/2018/10/09/hacking-the-zh03b-laser-particle-sensor/",
+      "published_date": "2025-08-09T21:05:59.879018",
+      "source": "Google News",
+      "author": null,
+      "summary": "Hacking The ZH03B Laser Particle Sensor",
+      "keywords": []
+    },
+    {
+      "title": "PiP-WATCH Project",
+      "content": "Meet PipWatch, a PipBoy-inspired wrist watch powered by a FireBeetle ESP32 board along with a round GC9A01 display.",
+      "url": "https://www.hackster.io/Arnov_Sharma_makes/pip-watch-project-370245",
+      "published_date": "2025-08-09T21:05:59.879629",
+      "source": "Google News",
+      "author": null,
+      "summary": "Meet PipWatch, a PipBoy-inspired wrist watch powered by a FireBeetle ESP32 board along with a round GC9A01 display.",
+      "keywords": []
+    },
+    {
+      "title": "More Allwinner F1C200s ARM9 boards: MangoPi R3 and CherryPi-F1C200S",
+      "content": "More Allwinner F1C200s ARM9 boards: MangoPi R3 and CherryPi-F1C200S",
+      "url": "https://www.cnx-software.com/2022/02/03/more-allwinner-f1c200s-arm9-boards-mangopi-r3-and-cherrypi-f1c200s/",
+      "published_date": "2025-08-09T21:05:59.880541",
+      "source": "Google News",
+      "author": null,
+      "summary": "More Allwinner F1C200s ARM9 boards: MangoPi R3 and CherryPi-F1C200S",
+      "keywords": []
+    },
+    {
+      "title": "BLE Micro is a Tiny, Coin-Cell Powered Bluetooth 4.0 Development Board",
+      "content": "BLE Micro is a Tiny, Coin-Cell Powered Bluetooth 4.0 Development Board",
+      "url": "https://www.cnx-software.com/2018/10/03/ble-micro-coin-cell-powered-bluetooth-le-development-board/",
+      "published_date": "2025-08-09T21:05:59.881222",
+      "source": "Google News",
+      "author": null,
+      "summary": "BLE Micro is a Tiny, Coin-Cell Powered Bluetooth 4.0 Development Board",
+      "keywords": []
+    }
+  ]
+}

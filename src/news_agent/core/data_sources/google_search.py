@@ -232,9 +232,18 @@ class GoogleSearchSource(DataSource):
         """解析Google搜索结果HTML，使用role='heading'属性定位标题"""
         results = []
         
+        heading_elements = []
+        
         # 查找所有带有role="heading"属性的元素
-        heading_elements = soup.find_all(attrs={"role": "heading"})
+        heading_elements.extend(soup.find_all(attrs={"role": "heading"}))
+        
         print(f"找到 {len(heading_elements)} 个role='heading'元素")
+        # 查找所有h3标签元素
+        heading_elements.extend(soup.find_all('h3'))
+        print(f"找到 {len(heading_elements)} 个h3元素")
+        
+        # find class ="LC20lb MBeuO DKV0Md"
+        heading_elements.extend(soup.find_all(class_="LC20lb MBeuO DKV0Md"))
         
         for heading in heading_elements:
             try:
